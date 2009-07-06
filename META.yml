@@ -1,0 +1,22 @@
+---
+name: App-ZofCMS-Plugin-GooglePageRank
+version: 0.0101
+author:
+  - "'Zoffix <'zoffix@cpan.org'>"
+abstract: Plugin to show Google Page Ranks
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  App::ZofCMS::Plugin::Base: 0.0103
+  WWW::Google::PageRank: 0.15
+build_requires:
+  Test::More: 0
+provides:
+  App::ZofCMS::Plugin::GooglePageRank:
+    file: lib/App/ZofCMS/Plugin/GooglePageRank.pm
+    version: 0.0101
+generated_by: Module::Build version 0.33
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
