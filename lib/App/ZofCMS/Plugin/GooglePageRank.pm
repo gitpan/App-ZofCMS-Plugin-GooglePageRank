@@ -6,7 +6,7 @@ use strict;
 use WWW::Google::PageRank;
 use base 'App::ZofCMS::Plugin::Base';
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 sub _key { 'plug_google_page_rank' }
 sub _defaults {
@@ -238,6 +238,7 @@ be shown as string C<'N/A'>.
 =head1 AUTHOR
 
 'Zoffix, C<< <'zoffix at cpan.org'> >>
+(L<http://haslayout.net/>, L<http://zoffix.com/>, L<http://zofdesign.com/>)
 
 =head1 BUGS
 
