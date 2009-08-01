@@ -6,7 +6,7 @@ use strict;
 use WWW::Google::PageRank;
 use base 'App::ZofCMS::Plugin::Base';
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 
 sub _key { 'plug_google_page_rank' }
 sub _defaults {
@@ -110,7 +110,23 @@ B<Mangatory>. You need to add the plugin to list of plugins to execute.
         key     => 'plug_google_page_rank',
     },
 
-B<Mandatory>. Takes a hashref as a value.
+    plug_google_page_rank => {
+        my ( $t, $q, $config ) = @_;
+        return {
+            uri     => 'zoffix.com',
+            timeout => 20,
+            agent   => 'Opera 9.6',
+            host    => 'suggestqueries.google.com',
+            cell    => 't',
+            key     => 'plug_google_page_rank',
+        };
+    },
+
+B<Mandatory>. Takes a hashref or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_google_page_rank> as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object.
 The C<plug_google_page_rank> first-level key can be set in either (or both)
 ZofCMS Template and Main Config File files. If set in both, the values of keys that are set in
 ZofCMS Template take precedence. Possible keys/values are as follows:

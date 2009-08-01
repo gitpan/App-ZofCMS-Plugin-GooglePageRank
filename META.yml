@@ -1,6 +1,6 @@
 ---
 name: App-ZofCMS-Plugin-GooglePageRank
-version: 0.0102
+version: 0.0103
 author:
   - "'Zoffix <'zoffix@cpan.org'>"
 abstract: Plugin to show Google Page Ranks
@@ -17,7 +17,7 @@ configure_requires:
 provides:
   App::ZofCMS::Plugin::GooglePageRank:
     file: lib/App/ZofCMS/Plugin/GooglePageRank.pm
-    version: 0.0102
+    version: 0.0103
 generated_by: Module::Build version 0.34
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
