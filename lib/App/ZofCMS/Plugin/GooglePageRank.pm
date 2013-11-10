@@ -6,7 +6,7 @@ use strict;
 use WWW::Google::PageRank;
 use base 'App::ZofCMS::Plugin::Base';
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 
 sub _key { 'plug_google_page_rank' }
 sub _defaults {
@@ -60,6 +60,8 @@ sub _do {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

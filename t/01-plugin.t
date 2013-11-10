@@ -5,6 +5,9 @@ use warnings;
 
 use Test::More;
 
+$ENV{HTTP_HOST} = 'http://zoffix.com';
+$ENV{REQUEST_URI} = '/';
+
 my $version = '0.0104';
 eval "use App::ZofCMS::Test::Plugin $version;";
 plan skip_all
